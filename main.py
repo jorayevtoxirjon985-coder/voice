@@ -4,9 +4,11 @@ from aiogram import Bot, Dispatcher, types, F
 from aiogram.filters import Command
 from pydub import AudioSegment
 
-# Bot tokeningizni bura yozing
-TOKEN = "SIZNING_TOKENINGIZ"
 
+# Railway Variables'dan o'qiydi
+TOKEN = os.getenv("BOT_TOKEN")
+
+bot = Bot(token=TOKEN)
 bot = Bot(token=TOKEN)
 dp = Dispatcher()
 
